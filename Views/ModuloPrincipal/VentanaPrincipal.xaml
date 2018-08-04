@@ -42,13 +42,13 @@
         </Grid.RowDefinitions>
         <Border Name="BordeFondo" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Background="White"></Border>
         <materialDesign:Card Visibility="Visible" VerticalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="2"/>
-        <Border Name="BordeTitulo" Grid.Column="0" Grid.Row="0" Background="{DynamicResource PrimaryHueDarkBrush}"></Border>
+        <Border Name="BordeTitulo" Grid.Column="0" Grid.Row="0" Background="#2ca8ff"></Border>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
                 <Image Name="IconoMaximizar" Stretch="Uniform" Style="{DynamicResource IconoComentario}" Height="16" Width="16" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
-                <TextBlock Name="TextBlockDirCorreo" Text="unisoft@nauta.com.cu" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignBody1TextBlock}" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock Name="TextBlockDirCorreo" Text="unisoft@nauta.com.cu" FontWeight="Light" VerticalAlignment="Center"  Foreground="White" Margin="5,0,0,0"/>
                 <Image Name="IconoTelefono" Stretch="Uniform" Style="{DynamicResource IconoTelefono}" Height="16" Width="16" VerticalAlignment="Center" SnapsToDevicePixels="True" Margin="15,0,0,0"/>
-                <TextBlock Name="TextBlockNumeroTelefono" Text="+53 550 858 62" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignBody1TextBlock}" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock Name="TextBlockNumeroTelefono" Text="+53 550 858 62" FontWeight="Light" VerticalAlignment="Center" Foreground="White" Margin="5,0,0,0"/>
             </StackPanel>
             <controles:BotonMinimizarAplicacion Name="BotonMinimizar" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right"/>
             <controles:BotonMaximizarAplicacion Name="BotonMaximizar" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right"/>
@@ -57,6 +57,6 @@
         <Image Name="IconoLogotipo" Stretch="Uniform" Style="{DynamicResource IconoLogotipo}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,0" Height="50" Width="75" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
         <controles:MenuAplicacion Name="MenuAplicacion" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto"/>
         <Frame Name="EspacioTrabajo" Height="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0"  VerticalAlignment="Stretch" Width="Auto" Grid.Column="2" Grid.Row="2" NavigationUIVisibility="Hidden" />
-        <Border Name="BordeExterior" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="1"></Border>
+        <Border Name="BordeExterior" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" BorderBrush="#2ca8ff" BorderThickness="1"></Border>
     </Grid>
 </Window>

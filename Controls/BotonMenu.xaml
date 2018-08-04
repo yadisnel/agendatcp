@@ -42,17 +42,16 @@
     </UserControl.Resources>
     <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="22"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="22"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="2"/>
         </Grid.RowDefinitions>
-        <Path Name="CapaSeleccion" Grid.Column="1" Grid.Row="1" Stroke="Black" Visibility="Visible" Height="22" Width="22" HorizontalAlignment="Center" VerticalAlignment="Center"  Data="M6,8 L11,14 L16,8" Stretch="None" Fill="Transparent"/>
-        <TextBlock Name="TituloBoton" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignSubheadingTextBlock}" Foreground="Black" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Text="Registro de Productos" />
-        <Button Style="{StaticResource EstiloBotonMenu}" Name="MiBotonMenu" Grid.ColumnSpan="4" Grid.RowSpan="2" Click="onClick"></Button>
+        <TextBlock Name="TituloBoton" HorizontalAlignment="Center"  Foreground="#555" FontSize="16" FontWeight="Light" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="Registro de Productos" />
+        <Button Style="{StaticResource EstiloBotonMenu}" Name="MiBotonMenu" Grid.ColumnSpan="3" Grid.RowSpan="3" Click="onClick"></Button>
     </Grid>
 </UserControl> 

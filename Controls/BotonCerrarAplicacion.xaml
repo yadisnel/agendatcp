@@ -26,8 +26,8 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate x:Name="tmpltButtonCerrar" >
-                        <Grid Height="20" Width="20">                            
-                            <Border Name="CapaSombra" BorderBrush="#FFD7E4F5" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="#FFD65A45"/>
+                        <Grid Height="20" Width="20">
+                            <Border Name="CapaSombra" BorderBrush="#f96332" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="#f96332"/>
                             <Image Name="Icono" Stretch="Uniform" Style="{StaticResource IconoBotonCerrar}" />
                         </Grid>
                         <ControlTemplate.Triggers>

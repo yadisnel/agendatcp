@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Agenda.Controles
 {
@@ -77,19 +78,15 @@ namespace Agenda.Controles
                 _estaSeleccionado = value;
                 if (_estaSeleccionado)
                 {                   
-                    CapaSeleccion.Visibility = System.Windows.Visibility.Visible;
                     this.Cursor = System.Windows.Input.Cursors.Arrow;
-                    System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("SecondaryAccentBrush");
+                    System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("PrimaryHueMidBrush");
                     TituloBoton.Foreground = color;
-                    CapaSeleccion.Stroke = color;
 
                 }
                 else
                 {                  
-                    CapaSeleccion.Visibility = System.Windows.Visibility.Hidden;
                     this.Cursor = System.Windows.Input.Cursors.Hand;
-                    TituloBoton.Foreground = System.Windows.Media.Brushes.Black;
-                    CapaSeleccion.Stroke = System.Windows.Media.Brushes.Black;
+                    TituloBoton.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#555"));
                 }
             }
         }
@@ -117,26 +114,21 @@ namespace Agenda.Controles
 
         private void BotonMenu_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("SecondaryAccentBrush");
+            //new SolidColorBrush( (Color)ColorConverter.ConvertFromString("#FFDFD991"));
+            System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("PrimaryHueMidBrush");
             TituloBoton.Foreground = color;
-            CapaSeleccion.Stroke = color;
-            CapaSeleccion.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void BotonMenu_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             if (!this.EstaSeleccionado)
             {
-                TituloBoton.Foreground = System.Windows.Media.Brushes.Black;
-                CapaSeleccion.Stroke = System.Windows.Media.Brushes.Black;
-                CapaSeleccion.Visibility = System.Windows.Visibility.Hidden;
+                TituloBoton.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#555"));
             }
             else
             {
-                System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("SecondaryAccentBrush");
+                System.Windows.Media.Brush color = (System.Windows.Media.Brush)this.FindResource("PrimaryHueMidBrush");
                 TituloBoton.Foreground = color;
-                CapaSeleccion.Stroke = color;
-                CapaSeleccion.Visibility = System.Windows.Visibility.Visible;
             }
         }
     }

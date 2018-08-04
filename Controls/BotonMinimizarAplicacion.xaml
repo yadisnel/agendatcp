@@ -28,7 +28,7 @@
                 <Setter.Value>
                     <ControlTemplate x:Name="tmpltButtonMinimizar" >
                         <Grid Height="20" Width="20">
-                            <Border Name="CapaSombra" BorderBrush="{DynamicResource PrimaryHueLightBrush}" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="{DynamicResource PrimaryHueLightBrush}"/>
+                            <Border Name="CapaSombra" BorderBrush="#FF6FC3FD" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="#FF6FC3FD"/>
                             <Image Name="Icono" Stretch="Uniform" Style="{StaticResource IconoBotonMinimizar}" />
                         </Grid>
                         <ControlTemplate.Triggers>

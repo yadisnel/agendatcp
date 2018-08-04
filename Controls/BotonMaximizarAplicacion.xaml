@@ -32,7 +32,7 @@
                 <Setter.Value>
                     <ControlTemplate x:Name="tmpltButtonMaximizar" >
                         <Grid Height="20" Width="20" >
-                            <Border Name="CapaSombra" BorderBrush="{DynamicResource PrimaryHueLightBrush}" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="{DynamicResource PrimaryHueLightBrush}"/>
+                            <Border Name="CapaSombra" BorderBrush="#FF6FC3FD" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="#FF6FC3FD"/>
                             <Image Name="IconoMaximizar" Stretch="Uniform" Style="{DynamicResource IconoBotonMaximizar}" DataContext="{Binding Source= BotonMaximizarAplicacion}"/>
                             <Image Name="IconoRestaurar" Stretch="Uniform" Visibility="Hidden" Style="{StaticResource IconoBotonRestaurar}"   DataContext="{Binding Source= BotonMaximizarAplicacion}"/>
                         </Grid>
