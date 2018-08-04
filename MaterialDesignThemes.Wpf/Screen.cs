@@ -291,7 +291,12 @@ namespace MaterialDesignThemes.Wpf
         /// </summary>
         public override bool Equals(object obj)
         {
-            return obj is Screen comp && _hmonitor == comp._hmonitor;
+            if (obj is Screen)
+            {
+                Screen comp = (Screen)obj;
+                return _hmonitor == comp._hmonitor;
+            }
+            return false;
         }
 
         /// <summary>
@@ -371,7 +376,8 @@ namespace MaterialDesignThemes.Wpf
             // someone re-queries. We will re-add the event at that time.
             SystemEvents.DisplaySettingsChanging -= OnDisplaySettingsChanging;
 
-            // Display settings changed, so the set of screens we have is invalid.            _screens = null;
+            // Display settings changed, so the set of screens we have is invalid.
+            _screens = null;
         }
 
         /// <summary>

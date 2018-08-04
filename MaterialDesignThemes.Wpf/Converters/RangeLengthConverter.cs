@@ -11,11 +11,11 @@ namespace MaterialDesignThemes.Wpf.Converters
         {
             if (values == null || values.Length != 4 || values.Any(v => v == null))
                 return Binding.DoNothing;
-
-            if (!double.TryParse(values[0].ToString(), out double min)
-                || !double.TryParse(values[1].ToString(), out double max)
-                || !double.TryParse(values[2].ToString(), out double value)
-                || !double.TryParse(values[3].ToString(), out double containerLength))
+            double min,max,value, containerLength;
+            if (!double.TryParse(values[0].ToString(),out min)
+                || !double.TryParse(values[1].ToString(), out  max)
+                || !double.TryParse(values[2].ToString(), out  value)
+                || !double.TryParse(values[3].ToString(), out  containerLength))
 
                 return Binding.DoNothing;
 

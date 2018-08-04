@@ -14,10 +14,10 @@ namespace MaterialDesignThemes.Wpf.Converters
         {
             if(values == null || values.Length != 3 || values.Any(v => v == null))
                 return Binding.DoNothing;
-
-            if (!double.TryParse(values[0].ToString(), out double positionAsScaleFactor)
-                || !double.TryParse(values[1].ToString(), out double lower)
-                || !double.TryParse(values[2].ToString(), out double upper))
+            double positionAsScaleFactor, lower, upper;
+            if (!double.TryParse(values[0].ToString(), out  positionAsScaleFactor)
+                || !double.TryParse(values[1].ToString(), out  lower)
+                || !double.TryParse(values[2].ToString(), out  upper))
 
                 return Binding.DoNothing;
 

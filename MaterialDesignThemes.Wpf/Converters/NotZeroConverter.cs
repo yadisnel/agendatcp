@@ -8,7 +8,8 @@ namespace MaterialDesignThemes.Wpf.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (double.TryParse((value ?? "").ToString(), out double val))
+            double val;
+            if (double.TryParse((value ?? "").ToString(), out val))
             {
                 return Math.Abs(val) > 0.0;
             }

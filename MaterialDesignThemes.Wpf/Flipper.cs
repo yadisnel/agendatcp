@@ -35,8 +35,8 @@ namespace MaterialDesignThemes.Wpf
 
         public object FrontContent
         {
-            get => GetValue(FrontContentProperty);
-            set => SetValue(FrontContentProperty, value);
+            get { return GetValue(FrontContentProperty); }
+            set { SetValue(FrontContentProperty, value); }
         }
 
         public static readonly DependencyProperty FrontContentTemplateProperty = DependencyProperty.Register(
@@ -44,8 +44,8 @@ namespace MaterialDesignThemes.Wpf
 
         public DataTemplate FrontContentTemplate
         {
-            get => (DataTemplate) GetValue(FrontContentTemplateProperty);
-            set => SetValue(FrontContentTemplateProperty, value);
+            get { return (DataTemplate)GetValue(FrontContentTemplateProperty); }
+            set { SetValue(FrontContentTemplateProperty, value); }
         }
 
         public static readonly DependencyProperty FrontContentTemplateSelectorProperty = DependencyProperty.Register(
@@ -53,8 +53,8 @@ namespace MaterialDesignThemes.Wpf
 
         public DataTemplateSelector FrontContentTemplateSelector
         {
-            get => (DataTemplateSelector) GetValue(FrontContentTemplateSelectorProperty);
-            set => SetValue(FrontContentTemplateSelectorProperty, value);
+            get { return (DataTemplateSelector)GetValue(FrontContentTemplateSelectorProperty); }
+            set { SetValue(FrontContentTemplateSelectorProperty, value); }
         }
 
         public static readonly DependencyProperty FrontContentStringFormatProperty = DependencyProperty.Register(
@@ -62,8 +62,8 @@ namespace MaterialDesignThemes.Wpf
 
         public string FrontContentStringFormat
         {
-            get => (string) GetValue(FrontContentStringFormatProperty);
-            set => SetValue(FrontContentStringFormatProperty, value);
+            get { return (string)GetValue(FrontContentStringFormatProperty); }
+            set { SetValue(FrontContentStringFormatProperty, value); }
         }
 
         public static readonly DependencyProperty BackContentProperty = DependencyProperty.Register(
@@ -71,8 +71,8 @@ namespace MaterialDesignThemes.Wpf
 
         public object BackContent
         {
-            get => (object) GetValue(BackContentProperty);
-            set => SetValue(BackContentProperty, value);
+            get { return (object)GetValue(BackContentProperty); }
+            set { SetValue(BackContentProperty, value); }
         }
 
         public static readonly DependencyProperty BackContentTemplateProperty = DependencyProperty.Register(
@@ -80,8 +80,8 @@ namespace MaterialDesignThemes.Wpf
 
         public DataTemplate BackContentTemplate
         {
-            get => (DataTemplate)GetValue(BackContentTemplateProperty);
-            set => SetValue(BackContentTemplateProperty, value);
+            get { return (DataTemplate)GetValue(BackContentTemplateProperty); }
+            set { SetValue(BackContentTemplateProperty, value); }
         }
 
         public static readonly DependencyProperty BackContentTemplateSelectorProperty = DependencyProperty.Register(
@@ -89,8 +89,8 @@ namespace MaterialDesignThemes.Wpf
 
         public DataTemplateSelector BackContentTemplateSelector
         {
-            get => (DataTemplateSelector)GetValue(BackContentTemplateSelectorProperty);
-            set => SetValue(BackContentTemplateSelectorProperty, value);
+            get { return (DataTemplateSelector)GetValue(BackContentTemplateSelectorProperty); }
+            set { SetValue(BackContentTemplateSelectorProperty, value); }
         }
 
         public static readonly DependencyProperty BackContentStringFormatProperty = DependencyProperty.Register(
@@ -98,8 +98,8 @@ namespace MaterialDesignThemes.Wpf
 
         public string BackContentStringFormat
         {
-            get => (string)GetValue(BackContentStringFormatProperty);
-            set => SetValue(BackContentStringFormatProperty, value);
+            get { return (string)GetValue(BackContentStringFormatProperty); }
+            set { SetValue(BackContentStringFormatProperty, value); }
         }
 
         public static readonly DependencyProperty IsFlippedProperty = DependencyProperty.Register(
@@ -115,8 +115,8 @@ namespace MaterialDesignThemes.Wpf
 
         public bool IsFlipped
         {
-            get => (bool) GetValue(IsFlippedProperty);
-            set => SetValue(IsFlippedProperty, value);
+            get { return (bool)GetValue(IsFlippedProperty); }
+            set { SetValue(IsFlippedProperty, value); }
         }
 
         public static readonly RoutedEvent IsFlippedChangedEvent =
@@ -128,8 +128,8 @@ namespace MaterialDesignThemes.Wpf
 
         public event RoutedPropertyChangedEventHandler<bool> IsFlippedChanged
         {
-            add => AddHandler(IsFlippedChangedEvent, value);
-            remove => RemoveHandler(IsFlippedChangedEvent, value);
+            add { AddHandler(IsFlippedChangedEvent, value); }
+            remove { RemoveHandler(IsFlippedChangedEvent, value); }
         }
 
         private static void OnIsFlippedChanged(
