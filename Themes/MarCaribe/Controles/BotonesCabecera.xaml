@@ -1,0 +1,304 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- BOTONES CABECERA -->
+    <!-- Color base del boton -->
+    <SolidColorBrush x:Key="ColorBaseBotonCabecera" Color="#FFB6D1F5"></SolidColorBrush>
+    <!-- Degradado de fondo  -->
+    <LinearGradientBrush x:Key="DegradadoFondoBotonCabecera" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+        <GradientStop Offset="0.2" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="0.8" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+    </LinearGradientBrush>
+    <!-- Degradado de fondo  -->
+    <LinearGradientBrush x:Key="DegradadoSeleccionBotonCabecera" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Offset="0" Color="#FF8BA6D1"></GradientStop>
+        <GradientStop Offset="0.2" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="0.8" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="1" Color="#FF8BA6D1"></GradientStop>
+    </LinearGradientBrush>
+    <!-- Estilo vidrio  -->
+    <Style  x:Key="EstiloVidrioBotonCabecera"  TargetType="{x:Type Border}" >
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#0F000000" Offset="0"/>
+                    <GradientStop Color="#2411322D" Offset="0.25"/>
+                    <GradientStop Color="#0F000000" Offset="0.5"/>
+                    <GradientStop Color="#2411322D" Offset="0.75"/>
+                    <GradientStop Color="#0F000000" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA COMPLETO -->
+    <Style  x:Key="EstiloBotonBotonCabeceraCompleto"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="4,4,2,2" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                        <Image Name="ImagenSeleccion"  Height="16" Margin="2,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="16" Source="../Imagenes/TrianguloAbajo.png" Grid.Column="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <Trigger Property="Button.Tag" Value="Descendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloArriba.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="Ascendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloAbajo.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/Transparente.png"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA IZQUIERDO -->
+    <Style  x:Key="EstiloBotonBotonCabeceraIzquierdo"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="4,0,0,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="4,0,0,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="4,0,0,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="4,0,0,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="4,0,0,2" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                        <Image Name="ImagenSeleccion"  Height="16" Margin="2,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="16" Source="../Imagenes/TrianguloAbajo.png" Grid.Column="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <Trigger Property="Button.Tag" Value="Descendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloArriba.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="Ascendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloAbajo.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/Transparente.png"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA CENTRAL -->
+    <Style  x:Key="EstiloBotonBotonCabeceraCentral"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="0,0,0,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="0,0,0,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="0,0,0,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="0,0,0,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="0,0,0,0" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                        <Image   Name="ImagenSeleccion" Height="16" Margin="2,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="16" Source="../Imagenes/TrianguloAbajo.png" Grid.Column="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <Trigger Property="Button.Tag" Value="Descendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloArriba.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="Ascendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloAbajo.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/Transparente.png"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA COMPLETO SIN ANIMACION -->
+    <Style  x:Key="EstiloBotonBotonCabeceraCompletoSinAnimacion"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="4,4,2,2" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="4,4,2,2" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA DERECHO SIN ANIMACION -->
+    <Style  x:Key="EstiloBotonBotonCabeceraDerechoSinAnimacion"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="0,4,4,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="0,4,4,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="0,4,4,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="0,4,4,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="0,4,4,0" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA IZQUIERDO SIN ANIMACION -->
+    <Style  x:Key="EstiloBotonBotonCabeceraIzquierdoSinAnimacion"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="4,0,0,4" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="4,0,0,4" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="4,0,0,4" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="4,0,0,4" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="4,0,0,4" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ESTILO BOTON CABECERA DERECHO -->
+    <Style  x:Key="EstiloBotonBotonCabeceraDerecho"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="21" MinWidth="21"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonCabecera}" CornerRadius="0,4,2,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonCabecera}" CornerRadius="0,4,2,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaDegradado" Background="{StaticResource DegradadoFondoBotonCabecera}" CornerRadius="0,4,2,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="{StaticResource DegradadoSeleccionBotonCabecera}" CornerRadius="0,4,2,0" Grid.ColumnSpan="2"/>
+                        <Border x:Name="CapaBordeExterno"  CornerRadius="0,4,2,0" BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" Grid.ColumnSpan="2"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                        <Image  Name="ImagenSeleccion" Height="16" Margin="2,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="16" Source="../Imagenes/TrianguloAbajo.png" Grid.Column="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <Trigger Property="Button.Tag" Value="Descendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloArriba.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="Ascendente">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/TrianguloAbajo.png"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag" Value="">
+                            <Setter Property="Source" TargetName="ImagenSeleccion" Value="../Imagenes/Transparente.png"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,56 @@
+﻿<Page x:Class="Agenda.Vistas.ModuloRegistroGastos.PaginaPrincipalRegistroGastos"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+      xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+      xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="545" d:DesignWidth="625"
+	  Title="Registro de gastos"
+      Name="ElementoRaiz">
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="625*" MinWidth="625"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55" MinHeight="55"/>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="60" MinHeight="60" MaxHeight="60" />
+            <RowDefinition Height="5" MinHeight="5" MaxHeight="5"/>
+            <RowDefinition Height="30" MinHeight="30" MaxHeight="30" />
+            <RowDefinition Height="10" MinHeight="10" MaxHeight="10"/>
+        </Grid.RowDefinitions>
+        <Grid Name="GridCabecera" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400*" MinWidth="400"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Listado de conceptos de gastos:" Height="15"  HorizontalAlignment="Left" Name="TextBlockListadoProductos" VerticalAlignment="Center" Width="Auto"  Grid.Column="0" Grid.Row="1" Margin="5,0,0,0"/>
+            <TextBlock Text="Fecha de registro:" Height="15"  HorizontalAlignment="Left" Name="TextBlockFechaRegistro" VerticalAlignment="Center" Width="Auto"  Grid.Column="1" Grid.Row="1" Margin="5,0,0,0"/>
+            <ComboBox   Height="24" Name="ComboBoxConceptosGastos"  Grid.Column="0" Grid.Row="3" Margin="5,0,5,0"/>
+            <DatePicker  Height="25" Name="DatePickerFechaRegistro" Grid.Column="1"  Grid.Row="3" Grid.ColumnSpan="3" Margin="0,0,5,0"/>
+        </Grid>
+        <Grid  Grid.Row="7" Grid.ColumnSpan="3" Grid.Column="0" Height="25" HorizontalAlignment="Stretch" Name="GridBotonesOperaciones" VerticalAlignment="Center" Margin="0,0,5,0" Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="268*" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+        </Grid>-->
+    </Grid>
+</Page>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Agenda.Controles.MenuAplicacion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controles="clr-namespace:Agenda.Controles"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="768"  SnapsToDevicePixels="True" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>           
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <!--<Border  Name="BordeExterior" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0,4,4,4" Opacity="1" Background="Transparent" BorderBrush="#FFCDD1DB" BorderThickness="0,0.5,0.5,0.5">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="2" Direction="30" Color="Gray" Opacity="0.2"></DropShadowEffect>
+            </Border.Effect>
+        </Border>-->
+        <StackPanel Name="StackPanelContenedor" Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,0,0">
+            
+        </StackPanel>        
+    </Grid>      
+</UserControl> 

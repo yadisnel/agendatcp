@@ -1,0 +1,129 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!--  ESTILO  DEL BORDE GRAFICO ESTADISTICO -->
+    <Style  x:Key="EstiloBordeGraficoEstadistico"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="Margin" Value="0,5,0,0" />
+        <Setter Property="CornerRadius" Value="4,4,4,4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                    <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+                    <GradientStop Offset="0.02" Color="#FFD2DFEE"></GradientStop>
+                    <GradientStop Offset="0.98" Color="#FFD2DFEE"></GradientStop>
+                    <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--  ESTILO  DEL BORDE INTERIOR GRAFICO ESTADISTICO -->
+    <Style  x:Key="EstiloBordeInteriorGraficoEstadistico"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />        
+        <Setter Property="CornerRadius" Value="4,4,4,4" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <!-- ************************************* ESTILO  BORDER INGRESOS ************************************-->
+    <!-- Estilo del border grafico estadistico -->
+    <Style  x:Key="EstiloBorderIngresos"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+                    <GradientStop Offset="0.1" Color="#C8A9EB58"></GradientStop>
+                    <GradientStop Offset="0.9" Color="#C8A9EB58"></GradientStop>
+                    <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ************************************* ESTILO  BORDER GASTOS ************************************-->
+    <!-- Estilo del border grafico estadistico -->
+    <Style  x:Key="EstiloBorderGastos"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+                    <GradientStop Offset="0.1" Color="#FFBA4141"></GradientStop>
+                    <GradientStop Offset="0.9" Color="#FFBA4141"></GradientStop>
+                    <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ************************************* ESTILO  BORDER GANANCIAS BRUTAS ************************************-->
+    <!-- Estilo del border grafico estadistico -->
+    <Style  x:Key="EstiloBorderGananciasBrutas"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+                    <GradientStop Offset="0.1" Color="#FF79ACEB"></GradientStop>
+                    <GradientStop Offset="0.9" Color="#FF79ACEB"></GradientStop>
+                    <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ************************************* BOTON ESTADISTICO ATRAS ************************************-->
+    <Style  x:Key="EstiloBotonGraficoEstadisticoAtras"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="7,0,0,0" />
+        <Setter Property="Height" Value="23" />
+        <Setter Property="Width" Value="23" />
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton">
+                    <Grid>
+                        <Image  Height="23" Margin="0,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="23" Source="../Imagenes/BotonEstadisticoAtras.png" Grid.Column="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ************************************* BOTON ESTADISTICO ADELANTE ************************************-->
+    <Style  x:Key="EstiloBotonGraficoEstadisticoAdelante"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0,0,7,0" />
+        <Setter Property="Height" Value="23" />
+        <Setter Property="Width" Value="23" />
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton">
+                    <Grid>
+                        <Image  Height="23" Margin="0,0,0,0" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="23" Source="../Imagenes/BotonEstadisticoAdelante.png" Grid.Column="0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

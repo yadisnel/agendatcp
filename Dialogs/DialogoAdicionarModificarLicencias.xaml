@@ -1,0 +1,39 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarLicencias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Entrada al sistema" Height="550" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>            
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>        
+        <Border Name="borderFondoVentana"  Grid.Row="0"  Grid.Column="0" Grid.RowSpan="5" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2"/>
+        <controles:BarraTitulo Name="ControlBarraTitulo" Icono="{DynamicResource IconoLogotipo}" Titulo="Selección de las licencias pertenecientes al trabajador" Height="28" Grid.ColumnSpan="1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <controles:BotonFlechaAbajo Name="BotonDeseleccionarActividad"  Grid.Row="0"  Grid.Column="1" Width="25" Height="25" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Name="TextBlockNumeroLicencia" Style="{DynamicResource EstiloTextBlockEtiquetas}"  Text="Número de licencia:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right"  VerticalAlignment="Center" Margin="0,0,140,0" />
+            <TextBox   Height="25" Name="TextBoxNumeroLicencia" Style="{DynamicResource EstiloControlTextBox}"  Grid.Column="0" Grid.Row="0"  Width="100" Margin="0,0,35,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <controles:BotonFlechaArriba Name="BotonSeleccionarActividad" Grid.Row="0"  Grid.Column="0" Width="25" Height="25" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Grid>
+        <controles:GridDatosVista Name="GridLicencias" Titulo ="Listado de licencias del trabajador"  Grid.Row="1" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5,5,5,0"></controles:GridDatosVista>
+        <controles:GridDatosVista Name="GridActividades" Titulo ="Listado completo de actividades disponibles para seleccionar"  Grid.Row="3" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5,0,5,5"></controles:GridDatosVista>
+        <Button Name="BotonAceptar" Style="{DynamicResource EstiloControlBotonComun}" Content="Aceptar" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="25" Margin="0,0,90,0"/>
+        <Button Name="BotonCancelar" Style="{DynamicResource EstiloControlBotonComun}" Content="Cancelar" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="25" Margin="0,0,5,0"/>-->
+    </Grid>
+</Window>
+

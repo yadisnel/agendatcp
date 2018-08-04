@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ******************BOTON MENU**********************************************************-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- Color base para la barra de titulo de la ventana y de controles-->
+    <SolidColorBrush x:Key="ColorBaseBarraTitulo" Color="#FFD7E4F5"></SolidColorBrush>
+    <!-- Color base para el texto de la barra de titulo de la ventana y de controles-->
+    <SolidColorBrush x:Key="ColorBaseTextoBarraTitulo" Color="White"></SolidColorBrush>
+    <!-- Color degradado para la barra de titulo de la ventana y de controles-->
+    <LinearGradientBrush x:Key="ColorDegradadoBarraTitulo" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Color="#FF99BCE8" Offset="0"/>
+        <GradientStop Color="#FFC9D8EE" Offset="1"/>
+        <GradientStop Color="#19ABC7EC" Offset="0.49"/>
+        <GradientStop Color="#7F99BCE8" Offset="0.03"/>
+        <GradientStop Color="#9999BCE8" Offset="0.5"/>
+    </LinearGradientBrush>
+    <!-- Color base para el boton cerrar la aplicacion-->
+    <SolidColorBrush x:Key="ColorBaseBotonCerrarAplicacion" Color="#FFD7E4F5"></SolidColorBrush>
+</ResourceDictionary> 

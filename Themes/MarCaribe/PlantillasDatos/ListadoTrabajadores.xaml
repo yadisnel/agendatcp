@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>        
+    </ResourceDictionary.MergedDictionaries>
+    <DataTemplate x:Key="plantillaDatosListadoTrabajadores">
+        <Grid  Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="28"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28" MinHeight="28"/>
+            </Grid.RowDefinitions>
+            <Image Name="IconoUsuario" Grid.Column="0" Grid.Row="0" Height="24" Width="24" Source="../Imagenes/User24.png" Stretch="Uniform"/>
+            <TextBlock Grid.Column="1"  Text="{Binding Path=Nit}" HorizontalAlignment="Left" Width="Auto"  Foreground="#FF003D5B" FontSize="12" Margin="2,0,0,0" Height="Auto" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2"  Text="{Binding Path=NombreApellidos}" HorizontalAlignment="Left" Foreground="#FF003D5B" FontSize="12" Width="Auto" Height="Auto" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <Button  Name="IconoLeyenda"  Width="18" Height="18" Style="{StaticResource BotonIconoRegistro}" Grid.Row="0" Grid.Column="3"  Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=EsCliente}">
+                <DataTrigger.Value>true</DataTrigger.Value>
+                <Setter Property="Visibility" TargetName="IconoLeyenda" Value="Visible"></Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=EsCliente}">
+                <DataTrigger.Value>false</DataTrigger.Value>
+                <Setter Property="Visibility" TargetName="IconoLeyenda" Value="Hidden"></Setter>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+</ResourceDictionary>

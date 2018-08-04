@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4728E3E2-F6F7-4291-9DBD-FC41EC283F52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bcf.Vistas</RootNamespace>
+    <AssemblyName>Views</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\VersionRelease\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VersionRelease\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=1.2.0.19509, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VersionRelease\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModuloCentroInformativo\PaginaPrincipalCentroInformativo.xaml.cs">
+      <DependentUpon>PaginaPrincipalCentroInformativo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionCuotasMensuales.xaml.cs">
+      <DependentUpon>PaginaConfiguracionCuotasMensuales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionNomencladorActividades.xaml.cs">
+      <DependentUpon>PaginaConfiguracionNomencladorActividades.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionNomencladores.xaml.cs">
+      <DependentUpon>PaginaConfiguracionNomencladores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionNomencladorEscalaProgresiva.xaml.cs">
+      <DependentUpon>PaginaConfiguracionNomencladorEscalaProgresiva.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionNomencladorMunicipios.xaml.cs">
+      <DependentUpon>PaginaConfiguracionNomencladorMunicipios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionNomencladorProvincias.xaml.cs">
+      <DependentUpon>PaginaConfiguracionNomencladorProvincias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaConfiguracionSeguridadSistema.xaml.cs">
+      <DependentUpon>PaginaConfiguracionSeguridadSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloConfiguracion\PaginaPrincipalConfiguracion.xaml.cs">
+      <DependentUpon>PaginaPrincipalConfiguracion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloPrincipal\DialogoSeleccionarTrabajadorLicencia.xaml.cs">
+      <DependentUpon>DialogoSeleccionarTrabajadorLicencia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloPrincipal\PaginaInicio.xaml.cs">
+      <DependentUpon>PaginaInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloPrincipal\PaginaReproductor.xaml.cs">
+      <DependentUpon>PaginaReproductor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloPrincipal\VentanaAutenticacion.xaml.cs">
+      <DependentUpon>VentanaAutenticacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloPrincipal\VentanaPrincipal.xaml.cs">
+      <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRegistroGastos\PaginaPrincipalRegistroGastos.xaml.cs">
+      <DependentUpon>PaginaPrincipalRegistroGastos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRegistroIngresos\PaginaPrincipalRegistroIngresos.xaml.cs">
+      <DependentUpon>PaginaPrincipalRegistroIngresos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRegistroIngresos\PaginaRegistroVentas.xaml.cs">
+      <DependentUpon>PaginaRegistroVentas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRegistroProductos\PaginaPrincipalRegistroProductos.xaml.cs">
+      <DependentUpon>PaginaPrincipalRegistroProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportes\PaginaPrincipalReportes.xaml.cs">
+      <DependentUpon>PaginaPrincipalReportes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ModuloCentroInformativo\PaginaPrincipalCentroInformativo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionCuotasMensuales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionNomencladorActividades.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionNomencladores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionNomencladorEscalaProgresiva.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionNomencladorMunicipios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionNomencladorProvincias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaConfiguracionSeguridadSistema.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloConfiguracion\PaginaPrincipalConfiguracion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloPrincipal\DialogoSeleccionarTrabajadorLicencia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloPrincipal\PaginaInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloPrincipal\PaginaReproductor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloPrincipal\VentanaAutenticacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloPrincipal\VentanaPrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloRegistroGastos\PaginaPrincipalRegistroGastos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloRegistroIngresos\PaginaPrincipalRegistroIngresos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloRegistroIngresos\PaginaRegistroVentas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloRegistroProductos\PaginaPrincipalRegistroProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuloReportes\PaginaPrincipalReportes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Clock4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Coin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModuloAyuda\" />
+    <Folder Include="ModuloControles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelViews\ModelViews.csproj">
+      <Project>{f77d58f3-28ac-4f95-aaa4-cabe975f9898}</Project>
+      <Name>ModelViews</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{adfadc4e-42b4-4684-8a56-6af7071edd25}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Help\Help.csproj">
+      <Project>{3e5843f4-c102-4c6d-9de6-3c563d456814}</Project>
+      <Name>Help</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{e8e21127-65de-4824-a861-7a80c3783352}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dialogs\Dialogs.csproj">
+      <Project>{91f35321-8550-424d-9a93-8b26142d44fb}</Project>
+      <Name>Dialogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Project>{cb760f61-4f2d-4476-a6fa-5ef3ff19ab24}</Project>
+      <Name>Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ModuloPrincipal\Imagenes\IconoComentario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ModuloPrincipal\Imagenes\IconoTelefono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ModuloPrincipal\Imagenes\IconoLogotipo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

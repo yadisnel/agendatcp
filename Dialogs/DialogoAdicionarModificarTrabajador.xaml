@@ -1,0 +1,62 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarTrabajador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Entrada al sistema" Height="152" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="15"/>           
+            <RowDefinition Height="25" />
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="5" />            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>                     
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Border Name="borderFondoVentana"  Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="8" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2"/>
+        <controles:BarraTitulo Name="ControlBarraTitulo" Icono="{DynamicResource IconoLogotipo}" Titulo="Adicionar nuevo trabajador" Height="28" Grid.ColumnSpan="6"/>
+        <TextBlock Name="TextBlockNombreApellidos" Style="{DynamicResource EstiloTextBlockEtiquetas}" Text="Nombre y Apellidos:"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,0,0"/>
+        <TextBlock Name="TextBlockNit" Text="NIT:" Style="{DynamicResource EstiloTextBlockEtiquetas}" Grid.Column="0"  Grid.Row="3" Margin="20,0,0,0"/>
+        <TextBox  Style="{DynamicResource EstiloControlTextBox}" Height="24" Name="TextBoxNombreApellidos"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="20,0,5,0" VerticalAlignment="Top">
+            <TextBox.Text>
+                <Binding Path="NombreApellidos" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionNombre/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Style="{DynamicResource EstiloControlTextBox}"  Height="24" Name="TextBoxNit"  Grid.Column="0" Grid.Row="4"  Margin="20,0,15,0">
+            <TextBox.Text>
+                <Binding Path="Nit" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionNit/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBlock Name="TextBlockSexo" Style="{DynamicResource EstiloTextBlockEtiquetas}" Text="Sexo:"  Grid.Column="1" Grid.Row="3" Margin="5,0,0,0"/>
+        <ComboBox Style="{DynamicResource EstiloControlComboBox}"  Height="24" Name="ComboBoxSexo"  Grid.Column="1" Grid.Row="4" Margin="5,0,10,0">
+            <ComboBox.Text>
+                <Binding Path="Sexo" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionSexo/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </ComboBox.Text>
+        </ComboBox>
+        <Button Name="BotonAdicionar" Style="{DynamicResource EstiloControlBotonComun}" Grid.Row="6"  Content="Adicionar" Grid.Column="1" Height="25" Margin="0,0,5,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+    </Grid>
+</Window>
+

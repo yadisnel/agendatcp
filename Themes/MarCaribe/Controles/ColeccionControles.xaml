@@ -1,0 +1,43 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BotonAsistentePrimeraConfiguracion.xaml"/>
+        <ResourceDictionary Source="BotonBarraTituloNavegacion.xaml"/>
+        <ResourceDictionary Source="BotonesCabecera.xaml"/>
+        <ResourceDictionary Source="BotonIconoCentroInformativo.xaml"/>
+        <ResourceDictionary Source="BotonCerrarVentana.xaml"/>
+        <ResourceDictionary Source="BotonComun.xaml"/>
+        <ResourceDictionary Source="BotonFlechaArriba.xaml"/>
+        <ResourceDictionary Source="BotonFlechaAbajo.xaml"/>
+        <ResourceDictionary Source="BotonMinimizarVentana.xaml"/>
+        <ResourceDictionary Source="BotonMaximizarVentana.xaml"/>
+        <ResourceDictionary Source="BotonMenu.xaml"/>
+        <ResourceDictionary Source="BotonSeleccionarActividad.xaml"/>
+        <ResourceDictionary Source="BotonMultimedia.xaml"/>
+        <ResourceDictionary Source="CheckBox.xaml"/>
+        <ResourceDictionary Source="ComboBox.xaml"/>
+        <ResourceDictionary Source="ComboBoxSimple.xaml"/>
+        <ResourceDictionary Source="DatePicker.xaml"/>
+        <ResourceDictionary Source="EstilosGraficoEstadistico.xaml"/>
+        <ResourceDictionary Source="GridDatosVista.xaml"/>
+        <ResourceDictionary Source="Label.xaml"/>
+        <ResourceDictionary Source="LabelPresentacion.xaml"/>
+        <ResourceDictionary Source="LabelTituloVentana.xaml"/>
+        <ResourceDictionary Source="LabelOpcionInicio.xaml"/>
+        <ResourceDictionary Source="ListBoxItem.xaml"/>
+        <ResourceDictionary Source="ListBox.xaml"/>
+        <ResourceDictionary Source="PasswordBox.xaml"/>
+        <ResourceDictionary Source="ScrollBar.xaml"/>
+        <ResourceDictionary Source="TextBlockEtiquetas.xaml"/>
+        <ResourceDictionary Source="TextBlockSubtituloInicio.xaml"/>
+        <ResourceDictionary Source="TextBlockSubtituloNuevoInicio.xaml"/>
+        <ResourceDictionary Source="TextBlockSubtituloTareasComunes.xaml"/>
+        <ResourceDictionary Source="TextBox.xaml"/>
+        <ResourceDictionary Source="TextBoxMultilinea.xaml"/>
+        <ResourceDictionary Source="EstiloBotonMenu.xaml"/>
+        <ResourceDictionary Source="EstiloBarraTitulo.xaml"/>
+        <ResourceDictionary Source="EstiloMenuAplicacion.xaml"/>
+        <ResourceDictionary Source="EstiloGraficoEstadistico.xaml"/>
+        <ResourceDictionary Source="EstiloBotonComun.xaml"/> 
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

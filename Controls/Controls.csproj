@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8E21127-65DE-4824-A861-7A80C3783352}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bcf.ModuloControles</RootNamespace>
+    <AssemblyName>Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VersionRelease\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=1.2.0.19509, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VersionRelease\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BotonAyuda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonSeleccionarTrabajadorActividad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonSimpleFondoAnimado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboBoxSimple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlSeleccionarTrabajadorActividad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonFlechaAbajo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonFlechaArriba.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonFlechaAtras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonFlechaAdelante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonBusqueda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonSeleccionGridDatos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonOrdenamientoGridDatos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonMenuGridDatos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlSeparadorHorizontal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlSeparador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlPestanas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonPestana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonSeleccionarFechaContable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonCentroInformativoAdelante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonCentroInformativoAtras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonOpcionAyuda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GridDatosVista.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GraficoEstadistico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuAplicacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BarraTitulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="BotonAyuda.xaml.cs">
+      <DependentUpon>BotonAyuda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonSeleccionarTrabajadorActividad.xaml.cs">
+      <DependentUpon>BotonSeleccionarTrabajadorActividad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonSimpleFondoAnimado.xaml.cs">
+      <DependentUpon>BotonSimpleFondoAnimado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxSimple.xaml.cs">
+      <DependentUpon>ComboBoxSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSeleccionarTrabajadorActividad.xaml.cs">
+      <DependentUpon>ControlSeleccionarTrabajadorActividad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonFlechaAbajo.xaml.cs">
+      <DependentUpon>BotonFlechaAbajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonFlechaArriba.xaml.cs">
+      <DependentUpon>BotonFlechaArriba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonFlechaAtras.xaml.cs">
+      <DependentUpon>BotonFlechaAtras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonFlechaAdelante.xaml.cs">
+      <DependentUpon>BotonFlechaAdelante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonBusqueda.xaml.cs">
+      <DependentUpon>BotonBusqueda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonSeleccionGridDatos.xaml.cs">
+      <DependentUpon>BotonSeleccionGridDatos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonOrdenamientoGridDatos.xaml.cs">
+      <DependentUpon>BotonOrdenamientoGridDatos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonMenuGridDatos.xaml.cs">
+      <DependentUpon>BotonMenuGridDatos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSeparadorHorizontal.xaml.cs">
+      <DependentUpon>ControlSeparadorHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSeparador.xaml.cs">
+      <DependentUpon>ControlSeparador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPestanas.xaml.cs">
+      <DependentUpon>ControlPestanas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonPestana.xaml.cs">
+      <DependentUpon>BotonPestana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonSeleccionarFechaContable.xaml.cs">
+      <DependentUpon>BotonSeleccionarFechaContable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonCentroInformativoAdelante.xaml.cs">
+      <DependentUpon>BotonCentroInformativoAdelante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonCentroInformativoAtras.xaml.cs">
+      <DependentUpon>BotonCentroInformativoAtras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonOpcionAyuda.xaml.cs">
+      <DependentUpon>BotonOpcionAyuda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridDatosVista.xaml.cs">
+      <DependentUpon>GridDatosVista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoEstadistico.xaml.cs">
+      <DependentUpon>GraficoEstadistico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAplicacion.xaml.cs">
+      <DependentUpon>MenuAplicacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonMenu.xaml.cs">
+      <DependentUpon>BotonMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BarraTitulo.xaml.cs">
+      <DependentUpon>BarraTitulo.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BotonMaximizarAplicacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonMinimizarAplicacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BotonCerrarAplicacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BotonMaximizarAplicacion.xaml.cs">
+      <DependentUpon>BotonMaximizarAplicacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonMinimizarAplicacion.xaml.cs">
+      <DependentUpon>BotonMinimizarAplicacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BotonCerrarAplicacion.xaml.cs">
+      <DependentUpon>BotonCerrarAplicacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Project>{cb760f61-4f2d-4476-a6fa-5ef3ff19ab24}</Project>
+      <Name>Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\IconoCerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\IconoMaximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\IconoRestaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\IconoMinimizar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

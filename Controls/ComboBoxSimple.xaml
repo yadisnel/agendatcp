@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="Agenda.Controles.ComboBoxSimple"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controles="clr-namespace:Agenda.Controles"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" d:DesignHeight="25 " d:DesignWidth="150" VerticalAlignment="Stretch" Height="Auto" SnapsToDevicePixels="True">
+    <UserControl.Resources>
+        <Style x:Key="EstiloTextBoxTextoSeleccionado" TargetType="{x:Type TextBox}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />            
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="AcceptsReturn" Value="True" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="VerticalScrollBarVisibility" Value="Disabled" />
+            <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+            <Setter Property="FontSize" Value="12" />        
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="tmpltTextBox">
+                        <Grid Height="Auto" VerticalAlignment="Stretch">
+                            <ScrollViewer Height="Auto" VerticalAlignment="Stretch" x:Name="PART_ContentHost" Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" Margin="0,4,0,0"></ScrollViewer>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>        
+        <Style  x:Key="EstiloBotonSeleccion"  TargetType="{x:Type Button}" >
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="tmpltBotonMenu" >
+                        <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Border Name="CapaUnica" Background="White" Opacity="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Name="GridRaiz" Height="Auto" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>            
+            <ColumnDefinition Width="1*" MaxWidth="24"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="18" MaxWidth="18" MinWidth="18"/>
+        </Grid.ColumnDefinitions>
+        <Image Name ="IconoControl" Height="18" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Center" Width="18"/>
+        <TextBox Name="TextoSeleccionado" Grid.Column="1" Style="{DynamicResource EstiloTextBoxTextoSeleccionado}" HorizontalAlignment="Stretch" Margin="5,0,0,0" Height="Auto" VerticalAlignment="Stretch"/>       
+        <Path Name="IconoTriangulo" Stroke="#FF802424" Height="10" Width="10" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible"  Fill="#FF802424"  Data="M20,30 L80,30 L50,70 Z" SnapsToDevicePixels="True" Stretch="Uniform" Grid.Column="2"/>
+        <Button Style="{DynamicResource EstiloBotonSeleccion}" Height="Auto" VerticalAlignment="Stretch" Content="" Name="MiBotonSeleccion" Grid.ColumnSpan="3" Click="onClick"></Button>
+        <Popup x:Name="ControlPopup" AllowsTransparency="True" Opacity="1" Width="225" Height="150">
+            <Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>                    
+                </Grid.RowDefinitions>
+                <Border Name="borderFondoVentana" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="White" CornerRadius="2,2,2,2" Margin="0,0,0,0" />
+                <ListBox  Name="ListadoElementos" ItemContainerStyle="{DynamicResource EstiloItemsComboBoxSimple}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AlternationCount="2" Width="Auto" Height="Auto"/>
+            </Grid>
+        </Popup>
+    </Grid>    
+</UserControl>

@@ -1,0 +1,38 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ListadoConceptosGasto.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaEscalaProgresivaHasta.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaEscalaProgresivaDesde.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaEscalaProgresivaPorciento.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaFechaRegistro.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCantidadUnidades.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNombreProducto.xaml"/>
+        <ResourceDictionary Source="plantillaDatosIconoItemsComboBoxSeleccionarTrabajador.xaml"/>
+        <ResourceDictionary Source="plantillaDatosIconoItemsComboBoxSeleccionarLicencia.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNombreProductoVentaConImporte.xaml"/> 
+        <ResourceDictionary Source="plantillaDatosCeldaNombreProvincia.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNombreMunicipio.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNombreActividad.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaCodigoProducto.xaml"/> 
+        <ResourceDictionary Source="plantillaDatosCeldaNombreTrabajador.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNitTrabajador.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaNumeroLicencia.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaPrecioProducto.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoVentas.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoProvincias.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoMunicipios.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoEscalas.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoActividades.xaml"/>       
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoProductos.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaIconoItemListadoTrabajadores.xaml"/> 
+        <ResourceDictionary Source="ListadoGastos.xaml"/>
+        <ResourceDictionary Source="ListadoConceptosIngreso.xaml"/>
+        <ResourceDictionary Source="ListadoProvincias.xaml"/>
+        <ResourceDictionary Source="ListadoSecciones.xaml"/>
+        <ResourceDictionary Source="ListadoTrabajadores.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaImporte.xaml"/>
+        <ResourceDictionary Source="plantillaDatosCeldaSubtotal.xaml"/>
+        <ResourceDictionary Source="ListadoMunicipios.xaml"/> 
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

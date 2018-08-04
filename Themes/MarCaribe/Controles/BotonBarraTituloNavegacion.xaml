@@ -1,0 +1,38 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <Style  x:Key="BorderFondoBarraTituloNavegacion"  TargetType="{x:Type Border}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                    <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+                    <GradientStop Offset="0.02" Color="#FFD2DFEE"></GradientStop>
+                    <GradientStop Offset="0.98" Color="#FFD2DFEE"></GradientStop>
+                    <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style  x:Key="BotonBarraTituloNavegacion"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Border x:Name="CapaBase"  Style="{StaticResource BorderFondoBarraTituloNavegacion}" CornerRadius="3,3,5,5"/>
+                        <Border x:Name="CapaBorde"   BorderBrush="#FF4779C0"  Opacity="1" BorderThickness="1" CornerRadius="3,3,5,5"/>
+                        <ContentPresenter Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

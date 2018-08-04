@@ -1,0 +1,19 @@
+﻿<Page x:Class="Agenda.Vistas.ModuloConfiguracion.PaginaConfiguracionSeguridadSistema"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignHeight="530" d:DesignWidth="445"
+	  Title="PaginaConfiguracionSeguridadSistema">
+
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Características de seguridad del sistema" Grid.Row="0" Grid.Column="0"  Margin="0,0,0,0" HorizontalAlignment="Stretch" Name="BotonCabeceraSeccionesConfiguracion" VerticalAlignment="Stretch"/>-->        
+    </Grid>
+</Page>

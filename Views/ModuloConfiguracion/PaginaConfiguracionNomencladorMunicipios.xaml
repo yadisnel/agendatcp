@@ -1,0 +1,23 @@
+﻿<Page x:Class="Agenda.Vistas.ModuloConfiguracion.PaginaConfiguracionNomencladorMunicipios"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignHeight="530" d:DesignWidth="670"
+	Title="PaginaConfiguracionactividadsSoportadas">
+
+    <Grid>
+        <!--<Grid.RowDefinitions>            
+            <RowDefinition Height="15"/>            
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="1*"/>            
+        </Grid.RowDefinitions>
+        <TextBlock Name="TextBlockProvincias"  Text="De la provincia:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" Margin="0,0,0,0" />
+        <ComboBox   Height="24" Name="ComboBoxProvincias"  Grid.Column="5" HorizontalAlignment="Left" Width="300" Grid.Row="1" Margin="0,0,0,0"/>-->
+        <!--<controles:GridDatosVista Name="GridMunicipios"  Grid.Column="0" Grid.Row="4" Titulo ="Listado de municipios configurados en el sistema"  Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></controles:GridDatosVista>-->       
+    </Grid>
+</Page>

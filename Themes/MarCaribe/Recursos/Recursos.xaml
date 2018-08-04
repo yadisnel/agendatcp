@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ImagenCarroCompras.xaml"/>
+        <ResourceDictionary Source="ImagenEntradaVentanaAutenticacion.xaml"/>
+        <ResourceDictionary Source="ImagenGraficoEstadistico.xaml"/>
+    </ResourceDictionary.MergedDictionaries>    
+</ResourceDictionary>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="Agenda.Vistas.ModuloPrincipal.PaginaReproductor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="627" d:DesignWidth="560"
+	Title="PaginaReproductor">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="264*" />
+            <RowDefinition Height="30" MaxHeight="30" MinHeight="30" />
+        </Grid.RowDefinitions>
+        <MediaElement Grid.RowSpan="2" Height="Auto" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="Reproductor" VerticalAlignment="Stretch" Width="Auto"  />
+        <Border BorderBrush="#3F000000" BorderThickness="1" Height="30" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="border1" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Background="#3D2A58A3" >
+            <Grid Width="Auto" Height="30" Margin="10,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="241*" />                   
+                </Grid.ColumnDefinitions>
+                <Button  Height="25" Width="25" Name="buttonAtras" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button  Height="25" Width="25" Name="buttonPlayPausa" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" />
+                <Button  Height="25" Width="25" Name="buttonStop"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" />
+                <Button  Height="25" Width="25" Name="buttonSilencio" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Background="#FFD18C28" />
+                <Slider Height="23" Name="sliderVolumen"  VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto" Grid.Column="4" Grid.Row="1"/>
+                <Slider Height="23" Name="sliderDesplazamiento"  VerticalAlignment="Center" Grid.Column="5" Margin="5,0,0,0"/>
+            </Grid>
+        </Border>-->
+    </Grid>
+</Page>

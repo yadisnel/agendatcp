@@ -1,0 +1,14 @@
+﻿<Page x:Class="Agenda.Vistas.ModuloConfiguracion.PaginaConfiguracionNomencladorProvincias"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" d:DesignHeight="530" d:DesignWidth="670"
+	Title="Configuración de las provincias registradas">
+    <Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<controles:GridDatosVista Name="GridProvincias" ItemTemplate="{DynamicResource plantillaDatosListadoListadoProvincias}" Titulo ="Listado de provincias configuradas en el sistema"  Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></controles:GridDatosVista>-->
+    </Grid>
+</Page>

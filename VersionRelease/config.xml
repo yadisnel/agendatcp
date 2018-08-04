@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raiz>
+  <servidorbd>
+    <parametro_conexion nombre="Data Source" valor ="[DIREJEC]\datos\bcfbdsq.dbd"></parametro_conexion>
+    <parametro_conexion nombre="Password" valor ="7f8tx/AqXC7dv9VYDjMXeQ=="></parametro_conexion>
+  </servidorbd>
+</raiz>

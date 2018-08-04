@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Agenda.Controles.BotonBusqueda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controles="clr-namespace:Agenda.Controles"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="28" d:DesignWidth="175" SnapsToDevicePixels="True" Height="28" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center" DataContext="{Binding RelativeSource={RelativeSource Self}}" Cursor="Hand">
+    <UserControl.Resources>      
+        <!-- Estilo del textbox -->
+        <Style x:Key="EstiloControlTextBoxBusqueda" TargetType="{x:Type TextBox}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource PlantillaValidacion}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="tmpltTextBox">
+                        <Grid>
+                            <Rectangle x:Name="CapaBase" Opacity="0.2" Fill="White" RadiusX="0" RadiusY="0"></Rectangle>                            
+                            <TextBlock x:Name="MarcaAgua" Opacity="0.7" Text="Buscar..." HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"></TextBlock>
+                            <Border x:Name="CapaBordeExterno" Opacity="0.5" BorderBrush="#FFCDD1DB" BorderThickness="1" CornerRadius="0"></Border>
+                            <ScrollViewer x:Name="PART_ContentHost" Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="{Binding Path=HorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=VerticalAlignment, RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=Width, RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=Height, RelativeSource={RelativeSource TemplatedParent}}" Margin="0,4,0,0"></ScrollViewer>
+                        </Grid>
+                        <ControlTemplate.Triggers>                           
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="TextBox.IsFocused" Value="true" />                                    
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="MarcaAgua" Property="Visibility"  Value="Hidden"/>
+                                <Setter TargetName="CapaBordeExterno" Property="Opacity"  Value="1"/>
+                                <Setter TargetName="CapaBase" Property="Opacity"  Value="1"/>
+                            </MultiTrigger>
+
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="TextBox.IsFocused" Value="false" />
+                                    <Condition Property="TextBox.Tag" Value ="NoTieneTexto"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="MarcaAgua" Property="Visibility"  Value="Visible"/>
+                                <Setter TargetName="CapaBordeExterno" Property="Opacity"  Value="0.5"/>
+                                <Setter TargetName="CapaBase" Property="Opacity"  Value="0.2"/>
+                            </MultiTrigger>
+
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="TextBox.IsFocused" Value="false" />
+                                    <Condition Property="TextBox.Tag" Value ="TieneTexto"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="MarcaAgua" Property="Visibility"  Value="Hidden"/>
+                                <Setter TargetName="CapaBordeExterno" Property="Opacity"  Value="1"/>
+                                <Setter TargetName="CapaBase" Property="Opacity"  Value="1"/>
+                            </MultiTrigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.ColumnDefinitions>            
+            <ColumnDefinition Width="22"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border Name="CapaBase" BorderThickness="0" Visibility="Hidden"  CornerRadius="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="4" Background="#FFFAFAFA"/>        
+        <Border Name="CapaSombra" BorderThickness="1"  Visibility="Hidden" CornerRadius="0" Opacity="1" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="3" BorderBrush="#FFCDD1DB" Background="White"/>
+        <TextBox Style="{DynamicResource EstiloControlTextBoxBusqueda}"  Name="TextBoxBusqueda" Grid.Column="1" Margin="1,3,0,3"/>
+        <Image Name ="IconoControl"  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" Height="22" Stretch="Fill" Margin="0,0,0,0" VerticalAlignment="Center" Width="22"/>        
+    </Grid>       
+</UserControl> 

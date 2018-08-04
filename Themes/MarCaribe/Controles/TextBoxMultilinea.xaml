@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- Fondo del textbox -->
+    <SolidColorBrush x:Key="ColorBaseTextBoxMultilinea" Color="Transparent"></SolidColorBrush>
+    <!-- Estilo del textbox -->
+    <Style x:Key="TextBoxMultilinea" TargetType="{x:Type TextBox}">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Validation.ErrorTemplate" Value="{StaticResource PlantillaValidacion}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltTextBox">
+                    <Grid>
+                        <ScrollViewer x:Name="PART_ContentHost" Opacity="1" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="{Binding Path=HorizontalAlignment, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=VerticalAlignment, RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=Width, RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=Height, RelativeSource={RelativeSource TemplatedParent}}" Margin="0,4,0,0"></ScrollViewer>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

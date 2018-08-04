@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Agenda.Controles.GraficoEstadistico"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controles="clr-namespace:Agenda.Controles"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="190" d:DesignWidth="200" Height="244" SnapsToDevicePixels="True" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*" MinWidth="53" />
+            <ColumnDefinition Width="53*" MinWidth="53" />
+            <ColumnDefinition Width="53*" MinWidth="53" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" MaxHeight="28" MinHeight="28" />
+            <RowDefinition Height="25" MaxHeight="25" MinHeight="25" />
+            <RowDefinition Height="95*" MinHeight="95"/>
+            <RowDefinition Height="20" MaxHeight="20" MinHeight="20" />
+            <RowDefinition Height="20" MaxHeight="20" MinHeight="20" />
+            <RowDefinition Height="20" MaxHeight="20" MinHeight="20" />
+            <RowDefinition Height="5" MaxHeight="5" MinHeight="5" />            
+        </Grid.RowDefinitions>
+        <controles:BarraTitulo x:Name="ControlBarraTitulo" Titulo="Gráfico estadístico" Icono="{DynamicResource IconoGraficoEstadistico}" Grid.ColumnSpan="3"/>
+        <controles:BotonFlechaAtras Height="25" Width="25" x:Name="BotonGraficoEstadisticoAtras"  Grid.Row="1"  Grid.Column="0" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+        <controles:BotonFlechaAdelante Height="25" Width="25" x:Name="BotonGraficoEstadisticoAdelante"  Grid.Row="1"  Grid.Column="2" Margin="0,0,5,0" HorizontalAlignment="Right"/>
+        <Label  Name="labelModoGrafico" Margin="0,8,0,0"  Grid.Row="1"  Grid.ColumnSpan="3" Content="100% Histórico" Height="30"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Border Name="borderFondoIngresos" Grid.Row="2"  Grid.Column="0" Margin="10,2,5,2" CornerRadius="4,4,4,4" BorderBrush="#FFABE85F" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#14A9EB58"></Border>
+        <Border Name="borderFondoGastos" Grid.Row="2"  Grid.Column="1" Margin="5,2,5,2" CornerRadius="4,4,4,4" BorderBrush="#C6EF8E71" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#1EFCCABB"></Border>
+        <Border Name="borderFondoGananciasBrutas" Grid.Row="2"  Grid.Column="2" Margin="5,2,10,2" CornerRadius="4,4,4,4" BorderBrush="#FF79ACEB" Background="#1EC0D4ED" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"></Border>
+        <Border Name="borderIngresos" Style="{DynamicResource EstiloBorderIngresos}" Height="110" Grid.Row="2"  Grid.Column="0" Margin="10,2,5,2" CornerRadius="4,4,4,4" BorderBrush="#FFABE85F" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom"></Border>
+        <Border Name="borderGastos"  Style="{DynamicResource EstiloBorderGastos}" Height="110" Grid.Row="2"  Grid.Column="1" Margin="5,2,5,2" CornerRadius="4,4,4,4" BorderBrush="#DFEF8E71" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" ></Border>
+        <Border Name="borderGananciasBrutas"  Style="{DynamicResource EstiloBorderGananciasBrutas}" Height="110" Grid.Row="2"  Grid.Column="2" Margin="5,2,10,2" CornerRadius="4,4,4,4" BorderBrush="#FF79ACEB" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom"></Border>
+        <Rectangle Margin="15,0,10,0"  Grid.Row="2"  Grid.ColumnSpan="3" Height="1" HorizontalAlignment="Stretch"  Name="rectanguloPosicionCero" Stroke="#FF4779C0" VerticalAlignment="Center" Width="Auto" />
+        <Label Margin="2,5,0,0"  Grid.Row="2"  Grid.ColumnSpan="3" Content="0" Height="30" Name="labelPosicionCeroGraficoVentas"  VerticalAlignment="Center" HorizontalAlignment="Left" />
+        <Border Name="borderLeyendaIngresos" Grid.Row="3" Margin="10,2,10,2" CornerRadius="4,4,4,4" BorderBrush="#FFABE85F" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.ColumnSpan="3" Background="#14A9EB58"></Border>
+        <Border Name="borderLeyendaGastos" Grid.Row="4" Margin="10,2,10,2" CornerRadius="4,4,4,4" BorderBrush="#C6EF8E71" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.ColumnSpan="3" Background="#14FCCABB"></Border>
+        <Border Name="borderLeyendaUtilidad" Grid.Row="5" Margin="10,2,10,2" CornerRadius="4,4,4,4" BorderBrush="#FF79ACEB" BorderThickness="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.ColumnSpan="3" Background="#14C0D4ED"></Border>
+        <Label Grid.Row="3" Grid.ColumnSpan="3" Margin="0,-2,0,0" Content="Ingresos" Height="25" Name="labelLeyendaIngresos"  VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="Auto" />
+        <Label Grid.Row="4" Grid.ColumnSpan="3" Margin="0,-2,0,0" Content="Gastos" Height="25" Name="labelLeyendaGastos" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="Auto" />
+        <Label Grid.Row="5" Grid.ColumnSpan="3" Margin="0,-2,0,0" Content="Utilidad bruta" Height="25" Name="labelLeyendaGanancias"  VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="Auto" />
+        <Border Name="BordeGrafico" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Grid.ColumnSpan="3" Grid.RowSpan="7" CornerRadius="2,2,2,2"></Border>
+    </Grid>      
+</UserControl> 

@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <DataTemplate x:Key="plantillaDatosCeldaIconoItemListadoVentas">
+        <Grid>
+            <Image Name="IconoItem" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="24" Width="24" Margin="2,0,0,0" Source="../Imagenes/IconoItemPlantillaDatosListadoVentas.png" Stretch="Uniform"/>
+        </Grid>          
+    </DataTemplate>
+</ResourceDictionary>

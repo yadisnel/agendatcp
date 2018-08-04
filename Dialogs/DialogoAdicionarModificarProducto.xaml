@@ -1,0 +1,54 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarProducto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Entrada al sistema" Height="176" Width="363" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="180" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />            
+        </Grid.ColumnDefinitions>
+        <Border Name="borderFondoVentana" Grid.RowSpan="2" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2" Margin="0,0,0,37" />
+        <controles:BarraTitulo Name="ControlBarraTitulo" Icono="{DynamicResource IconoLogotipo}" Titulo="Adicionar nuevo producto" Height="28" Grid.ColumnSpan="6"/>
+        <TextBlock Style="{DynamicResource EstiloTextBlockEtiquetas}" Name="TextBlockNombreProducto" Text="Nombre:" Width="49" HorizontalAlignment="Left" Margin="19,7,0,155" Grid.Row="1" />
+        <TextBox   Name="TextBoxNombreProduct" Style="{DynamicResource EstiloControlTextBox}"  Width="178" HorizontalAlignment="Left" Margin="20,21,0,135" Grid.Row="1" Height="23" >
+            <TextBox.Text>
+                <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionNombre/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox   Name="TextBoxPrecioProducto" Style="{DynamicResource EstiloControlTextBox}" Width="135" HorizontalAlignment="Left" Margin="216,21,0,136" Grid.Row="1" Height="23">
+            <TextBox.Text>
+                <Binding Path="Precio" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionImporte />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBlock Style="{DynamicResource EstiloTextBlockEtiquetas}" Name="LabelPrecioProducto" Text="Precio:" Width="49" HorizontalAlignment="Left" Margin="215,0,0,146" Height="28" VerticalAlignment="Bottom" Grid.Row="1" />
+        <TextBlock Style="{DynamicResource EstiloTextBlockEtiquetas}" Name="LabelDescripcionProducto" Text="Descripción:" Width="77" HorizontalAlignment="Left" Margin="20,0,0,102" Grid.Row="1" Height="28" VerticalAlignment="Bottom" />
+        <TextBox  Name="TextBoxDescripcionProducto" Style="{DynamicResource EstiloControlTextBox}" Margin="20,67,12,90" Grid.Row="1" Height="23">
+            <TextBox.Text>
+                <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged"/>
+            </TextBox.Text>
+        </TextBox>
+
+        <Button  Style="{DynamicResource EstiloControlBotonComun}" Name="BotonAdicionar" Content="Adicionar" Width="77" HorizontalAlignment="Right" Margin="251,103,15,53" Grid.Row="1" IsDefault="True" />-->
+    </Grid>
+</Window>
+

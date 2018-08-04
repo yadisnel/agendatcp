@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCFD4B14-BD3C-4E1C-B067-E31C7FD58944}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bcf.ModuloTemasAplicacion</RootNamespace>
+    <AssemblyName>Themes</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\VersionRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Principal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\CarroCompras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\TrianguloAbajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\TrianguloArriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Aceptar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Aceptar24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\BotonEstadisticoAdelante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\BotonEstadisticoAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\EmisionReportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\GraficoEstadistico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\RegistroGastos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\RegistroProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\FlechaAbajo32.png" />
+    <Resource Include="MarCaribe\Imagenes\FlechaArriba32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoSecciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonCerrarVentana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonMinimizarVentana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\PasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\Ejemplo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstiloBotonComun.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonMaximizarVentana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBoxMultilinea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonSeleccionarActividad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonesCabecera.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBlockEtiquetas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\LabelTituloVentana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\PlantillasDatos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoTrabajadores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoMunicipios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonFlechaArriba.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonFlechaAbajo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonAsistentePrimeraConfiguracion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Recursos\Ejemplo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Recursos\ImagenEntradaVentanaAutenticacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBlockSubtituloInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBlockSubtituloNuevoInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\TextBlockSubtituloTareasComunes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\LabelOpcionInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\LabelPresentacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Recursos\ImagenGraficoEstadistico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonBarraTituloNavegacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstilosGraficoEstadistico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoGastos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Recursos\ImagenCarroCompras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonMultimedia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Recursos\Recursos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\TrianguloDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonIconoCentroInformativo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Reloj24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Info24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonBarraTitulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\EstilosComunes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstiloBotonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ColeccionControles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstiloMenuAplicacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstiloBarraTitulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\EstiloGraficoEstadistico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\guardar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\lupa22x22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Info16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\User24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoTrabajadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\AdicionarActividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\EliminarActividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoUsuario24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoAdicionar.png" />
+    <Resource Include="MarCaribe\Imagenes\IconoEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantitllaDatosListadoActividades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\BotonComun.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoEjemplo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorProvincias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorMunicipios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorConceptoIngreso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorEscalaProgresiva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorConceptoGasto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladorActividades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaDatosLaborales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaSeguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaNomencladores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoProvincias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoProvincias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoMunicipios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoEscalas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoConceptosGasto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoConceptosGasto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoConceptosIngreso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\ListadoConceptosIngreso.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoInformacionCentroInformativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoAdvertenciaCentroInformativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoErrorCentroInformativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoAyudaCentroInformativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoVentasConImporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonOpcionAyudaEnTexto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonOpcionAyudaEnVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonOpcionAyudaReferenciaGeneral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonOpcionAyudaGuiaInicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonOpcionAyudaAcercaDelSoftware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\GridDatosVista.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaSubtotal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaFechaRegistro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCantidadUnidades.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaImporte.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoVentas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreActividad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoActividades.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaCodigoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaPrecioProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreTrabajador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNitTrabajador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreProductoVentaConImporte.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreProvincia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNombreMunicipio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoProvincias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoMunicipios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoEscalas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaEscalaProgresivaPorciento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaEscalaProgresivaHasta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaEscalaProgresivaDesde.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaIconoItemListadoTrabajadores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosCeldaNumeroLicencia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoEstablecerLimites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoPestanaCuotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Activacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonMenuAyuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoLogotipoUnisoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Controles\ComboBoxSimple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoComboBoxSeleccionarTrabajadorBotonSeleccionarActividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoComboBoxSeleccionarActividadBotonSeleccionarActividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosIconoItemsComboBoxSeleccionarTrabajador.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\PlantillasDatos\plantillaDatosIconoItemsComboBoxSeleccionarLicencia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoCerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoMaximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonSeleccionarFechaContable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonSeleccionarActividad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoLogotipoBcf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoRestaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonAyuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\RegistroIngresos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonMenuCentroInformativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoItemPlantillaDatosListadoProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonAdicionarProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonModificarProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBotonEliminarProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoAreaDetalles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MarCaribe\Imagenes\IconoBuscar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

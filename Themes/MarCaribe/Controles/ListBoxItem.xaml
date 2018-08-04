@@ -1,0 +1,48 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- Estilo del icono seleccionado -->
+    <Style  x:Key="BotonIconoSeleccionado"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Ellipse Name="Bombilla" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Stroke="#FF595E88" SnapsToDevicePixels="True" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFD3F5BA" Offset="0"/>
+                                    <GradientStop Color="#FF595E88" Offset="0.991"/>
+                                    <GradientStop Color="White" Offset="0.001"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse Name="BombillaEncandecente" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Stroke="#FF595E88" SnapsToDevicePixels="True" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFD3F5BA" Offset="0"/>
+                                    <GradientStop Color="#FF595E88" Offset="0.991"/>
+                                    <GradientStop Color="Red" Offset="0.001"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsVisible" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BombillaEncandecente"   Storyboard.TargetProperty="Opacity"  From="0.7" To="0.0" BeginTime="0:0:0" Duration="0:0:3"  AutoReverse="False"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>    
+</ResourceDictionary>

@@ -1,0 +1,19 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ******************BOTON MENU**********************************************************-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- Color base para el boton menu-->
+    <SolidColorBrush x:Key="ColorBaseControlBotonMenu" Color="#FFD7E4F5"></SolidColorBrush>
+    <!-- Color degradado para la sombra del boton menu-->
+    <LinearGradientBrush x:Key="ColorCapaSombraBotonMenu" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Color="#FF99BCE8" Offset="0"/>
+        <GradientStop Color="#FFC9D8EE" Offset="1"/>
+        <GradientStop Color="#19ABC7EC" Offset="0.49"/>
+        <GradientStop Color="#7F99BCE8" Offset="0.03"/>
+        <GradientStop Color="#9999BCE8" Offset="0.5"/>
+    </LinearGradientBrush>
+    <!-- Color base para el texto del titulo del boton menu-->
+    <SolidColorBrush x:Key="ColorTextoBotonMenu" Color="#FF04408C"></SolidColorBrush>
+</ResourceDictionary> 

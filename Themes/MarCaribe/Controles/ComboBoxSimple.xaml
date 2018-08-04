@@ -1,0 +1,58 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- *********************************ComboBoxSimple*******************************-->
+    <!-- Color del texto cuando esta seleccionado-->
+    <SolidColorBrush x:Key="ColorTextoSeleccionado" Color="#FF003D5B"></SolidColorBrush> 
+    <!-- Color del texto para el efecto mouse enter cuando esta seleccionado -->
+    <SolidColorBrush x:Key="ColorTextoSeleccionadoMouseEnter" Color="#FF4D91E4"></SolidColorBrush>    
+    <!-- Color del texto cuando no hay nada seleccionado -->
+    <SolidColorBrush x:Key="ColorTextoCuandoNoHaySeleccion" Color="#FF802424"></SolidColorBrush>
+    <!-- Color del texto para el efecto mouse enter cuando no esta seleccionado-->
+    <SolidColorBrush x:Key="ColorTextoCuandoNoHaySeleccionMouseEnter" Color="#FFC74141"></SolidColorBrush>
+    <Style x:Key="EstiloItemsComboBoxSimple" TargetType= "ListBoxItem">
+        <Setter Property="SnapsToDevicePixels"   Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid  Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="28*"  MinHeight="28"/>
+                        </Grid.RowDefinitions>
+                        <Border Name="CapaBase" Grid.Row="0" Grid.Column="0" CornerRadius="0,0,0,0" BorderThickness="1" BorderBrush="#FFDDDDDD" Background="#4F5C92E8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="-1,-1,-1,0" Opacity="1"/>
+                        <Border Name="CapaSombra" Grid.Row="0" Grid.Column="0" CornerRadius="0,0,0,0" BorderThickness="1" BorderBrush="#FFDDDDDD" Background="#FFEFEFEF" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="-1,-1,-1,0" Opacity="1"/>
+                        <Border Name="CapaSeleccion" Grid.Row="0" Grid.Column="0" CornerRadius="0,0,0,0" BorderThickness="1" BorderBrush="#FFDDDDDD" Background="#FFDFE8F6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="-1,-1,-1,0" Opacity="1"/>
+                        <ContentPresenter HorizontalAlignment="Left" Margin="5,0,5,0" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected"  Value="true">
+                            <Setter TargetName="CapaSeleccion" Property="Visibility"  Value="Visible"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsSelected"  Value="false">
+                            <Setter TargetName="CapaSeleccion" Property="Visibility"  Value="Hidden"></Setter>
+                        </Trigger>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                            <Setter TargetName="CapaBase" Property="Background" Value="#FFFEFEFE"></Setter>
+                        </Trigger>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter TargetName="CapaBase" Property="Background" Value="#FFFAFAFA"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="true">
+                            <Setter TargetName="CapaSombra" Property="Visibility"  Value="Visible"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"  Value="false">
+                            <Setter TargetName="CapaSombra" Property="Visibility"  Value="Hidden"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

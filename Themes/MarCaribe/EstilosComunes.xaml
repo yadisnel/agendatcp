@@ -1,0 +1,226 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ****************************************************************************-->
+    <!-- ************         PLANTILLAS COMUNES          ***************************-->
+    <!-- ****************************************************************************-->
+    <!-- Color base para el borde de los controles-->
+    <SolidColorBrush x:Key="ColorBaseBordeControl" Color="#FFCDD1DB"></SolidColorBrush>
+    <!-- Color base para el fondo de la ventana-->
+    <SolidColorBrush x:Key="ColorBaseFondoVentana" Color="White"></SolidColorBrush>  
+    <!-- Animacion de sombra salida -->
+    <Storyboard x:Key="AnimacionSombraSalida">
+        <DoubleAnimation BeginTime="00:00:00" Storyboard.TargetName="CapaSombra" Duration="00:00:00.250" From="1" To="0" Storyboard.TargetProperty="Opacity"></DoubleAnimation>
+    </Storyboard>
+    <!-- Animacion de sombra entrada -->
+    <Storyboard x:Key="AnimacionSombraEntrada">
+        <DoubleAnimation  BeginTime="00:00:00" Storyboard.TargetName="CapaSombra" Duration="00:00:00.250" From="0" To="1" Storyboard.TargetProperty="Opacity">
+        </DoubleAnimation>
+    </Storyboard>
+    <Storyboard x:Key="AnimacionVisibleIntermitente">
+        <DoubleAnimation  BeginTime="00:00:00" Duration="00:00:1.5" From="1" To="0.2" Storyboard.TargetProperty="Opacity" AutoReverse="True" RepeatBehavior="Forever">
+        </DoubleAnimation>
+    </Storyboard>
+    <Storyboard x:Key="AnimacionVisibleIntermitenteStop">
+        <DoubleAnimation  BeginTime="00:00:00" Duration="00:00:0" From="0.2" To="1" Storyboard.TargetProperty="Opacity">
+        </DoubleAnimation>
+    </Storyboard>
+    <!-- Plantilla para el icono del error-->
+    <Storyboard x:Key="DestelloIconoError">
+        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+            <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Visible}"/>
+            <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000" Value="{x:Static Visibility.Hidden}"/>
+            <DiscreteObjectKeyFrame KeyTime="00:00:01.4000000" Value="{x:Static Visibility.Visible}"/>
+        </ObjectAnimationUsingKeyFrames>
+    </Storyboard>
+    <ControlTemplate x:Key="PlantillaValidacion">
+        <DockPanel>
+            <Grid DockPanel.Dock="Left" Width="16" Height="16" VerticalAlignment="Center" Margin="3 0 0 0">
+                <Ellipse Width="16" Height="16" Fill="Red"/>
+                <Ellipse Width="3" Height="8" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 2 0 0" Fill="White"/>
+                <Ellipse Width="2" Height="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 2" Fill="White"/>
+            </Grid>
+            <Border BorderBrush="Transparent" BorderThickness="2" CornerRadius="3">
+                <AdornedElementPlaceholder/>
+            </Border>
+            <DockPanel.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource DestelloIconoError}"/>
+                </EventTrigger>
+            </DockPanel.Triggers>
+        </DockPanel>
+    </ControlTemplate>
+    <!-- Estilo de la imagen del logotipo -->
+    <Style x:Key="EstiloImagenLogotipo" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoLogotipoUnisoft.png" />
+    </Style>
+    <!-- Barra de titulo estilo cristal -->
+    <Style x:Key="EfectoCristalVentanaComun" TargetType="Border">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="CornerRadius" Value="0,0,6,6"/>
+        <Setter Property="BorderBrush" Value="#FF4779C0"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Padding" Value="5,30,5,5"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.75,1" StartPoint="0.25,0">
+                    <GradientStop Color="#33FFFFFF" Offset="0"/>
+                    <GradientStop Color="#C0FFFFFF" Offset="0.287"/>
+                    <GradientStop Color="#4011322D" Offset="0.683"/>
+                    <GradientStop Color="#33FFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Color de fondo barra titulo -->
+    <Style x:Key="ColorFondoVentanaComun" TargetType="Border">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#E8ACCCE8"/>
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="CornerRadius" Value="0,0,6,6"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+    <!-- Estilo del cuerpo de la ventana -->
+    <Style x:Key="ColorFondoCuerpoVentanaComun" TargetType="Border">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderBrush" Value="#FF4779C0"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style  x:Key="BotonIconoRegistro"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="25*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Stroke="#FF10415E" SnapsToDevicePixels="True" Grid.Row="0" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="5">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFD3F5BA" Offset="0"/>
+                                    <GradientStop Color="#FF04578E" Offset="1"/>
+                                    <GradientStop Color="#FFC7E8F3" Offset="0.002"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Stroke="#FF10415E" SnapsToDevicePixels="True" Fill="#FFE2ECF4" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+                        <Ellipse HorizontalAlignment="Stretch" Height="30" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="30" Stroke="#FF10415E" SnapsToDevicePixels="True" Fill="White" Grid.Row="2" Grid.Column="2"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>    
+    <Image x:Key="IconoLogotipo" Source="Imagenes/IconoLogotipoUnisoft.png" Stretch="Fill" Height="28" Width="28"/>
+    <Image x:Key="IconoLogotipoBcf" Source="Imagenes/IconoLogotipoBcf.png" Stretch="Fill" Height="28" Width="28"/>
+    <Image x:Key="IconoGuardar" Source="Imagenes/guardar32.png" Stretch="Fill" Height="28" Width="28"/>
+    <Image x:Key="IconoBuscar" Source="Imagenes/IconoBuscar.png" Stretch="Uniform" Height="22" Width="22"/>
+    <Image x:Key="IconoInformacion" Source="Imagenes/Info16.png" Stretch="Fill" Height="16" Width="16"/>
+    <Image x:Key="IconoAdicionar" Source="Imagenes/IconoAdicionar.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonAdicionarProducto" Source="Imagenes/IconoBotonAdicionarProducto.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonModificarProducto" Source="Imagenes/IconoBotonModificarProducto.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonEliminarProducto" Source="Imagenes/IconoBotonEliminarProducto.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoEliminar" Source="Imagenes/IconoEliminar.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoModificar" Source="Imagenes/IconoModificar.png" Stretch="Uniform" Height="24" Width="24"/>
+    <Image x:Key="IconoEstablecerLimites" Source="Imagenes/IconoEstablecerLimites.png" Stretch="Fill" Height="24" Width="24"/>
+    
+    <Image x:Key="IconoPestanaNomencladorActividades" Source="Imagenes/IconoPestanaNomencladorActividades.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoComboBoxSeleccionarTrabajadorBotonSeleccionarActividad" Source="Imagenes/IconoComboBoxSeleccionarTrabajadorBotonSeleccionarActividad.png" Stretch="Fill" Height="18" Width="18"/>
+    <Image x:Key="IconoComboBoxSeleccionarActividadBotonSeleccionarActividad" Source="Imagenes/IconoComboBoxSeleccionarActividadBotonSeleccionarActividad.png" Stretch="Fill" Height="18" Width="18"/> 
+    <Image x:Key="IconoPestanaNomencladorConceptoGasto" Source="Imagenes/IconoPestanaNomencladorConceptoGasto.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaNomencladorConceptoIngreso" Source="Imagenes/IconoPestanaNomencladorConceptoIngreso.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaNomencladorEscalaProgresiva" Source="Imagenes/IconoPestanaNomencladorEscalaProgresiva.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaNomencladorMunicipios" Source="Imagenes/IconoPestanaNomencladorMunicipios.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaNomencladorProvincias" Source="Imagenes/IconoPestanaNomencladorProvincias.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaDatosLaborales" Source="Imagenes/IconoPestanaDatosLaborales.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaSeguridad" Source="Imagenes/IconoPestanaSeguridad.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaCuotas" Source="Imagenes/IconoPestanaCuotas.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoPestanaNomencladores" Source="Imagenes/IconoPestanaNomencladores.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonOpcionAyudaEnTexto" Source="Imagenes/IconoBotonOpcionAyudaEnTexto.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonOpcionAyudaEnVideo" Source="Imagenes/IconoBotonOpcionAyudaEnVideo.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonOpcionAyudaGuiaInicio" Source="Imagenes/IconoBotonOpcionAyudaGuiaInicio.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonOpcionAyudaReferenciaGeneral" Source="Imagenes/IconoBotonOpcionAyudaReferenciaGeneral.png" Stretch="Fill" Height="24" Width="24"/>
+    <Image x:Key="IconoBotonOpcionAyudaAcercaDe" Source="Imagenes/IconoBotonOpcionAyudaAcercaDelSoftware.png" Stretch="Fill" Height="24" Width="24"/>
+
+
+    <Style x:Key="IconoAreaDetalles" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoAreaDetalles.png" />
+    </Style>
+    <Style x:Key="IconoInformacionCentroInformativo" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoInformacionCentroInformativo.png" />       
+    </Style>
+    <Style x:Key="IconoLogotipoUnisoft" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoLogotipoUnisoft.png" />
+    </Style>
+    <Style x:Key="IconoAdvertenciaCentroInformativo" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoAdvertenciaCentroInformativo.png" />
+    </Style>
+    <Style x:Key="IconoBotonSeleccionarActividad" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoBotonSeleccionarActividad.png" />
+    </Style>
+    <Style x:Key="IconoBotonSeleccionarFechaContable" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoBotonSeleccionarFechaContable.png" /> 
+    </Style>
+    <Style x:Key="IconoAyudaCentroInformativo" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoAyudaCentroInformativo.png" />
+    </Style>
+    <Style x:Key="IconoErrorCentroInformativo" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoErrorCentroInformativo.png" />
+    </Style>
+    <Style x:Key="IconoBotonCerrar" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoCerrar.png" />
+    </Style>
+    <Style x:Key="IconoBotonMaximizar" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoMaximizar.png" />
+    </Style>
+    <Style x:Key="IconoBotonRestaurar" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoRestaurar.png" />
+    </Style>
+    <Style x:Key="IconoBotonMinimizar" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoMinimizar.png" />
+    </Style>
+    <Style x:Key="IconoBotonAyuda" TargetType="Image">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Source" Value="Imagenes/IconoBotonAyuda.png" />
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <DataTemplate x:Key="plantillaDatosIconoItemsComboBoxSeleccionarLicencia">
+        <Grid  Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"/>
+                <ColumnDefinition Width="1*"/>               
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4" MinHeight="4"/>
+                <RowDefinition Height="20" MinHeight="20"/>
+                <RowDefinition Height="4" MinHeight="4"/>
+            </Grid.RowDefinitions>
+            <Image Name="IconoItem" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="24" Width="24" Source="../Imagenes/IconoComboBoxSeleccionarActividadBotonSeleccionarActividad.png" Stretch="Uniform"/>
+            <TextBlock Grid.Column="1"  Grid.Row="1" Text="{Binding Path=Nombre}" Foreground="#FF003D5B" FontSize="12" HorizontalAlignment="Left" Width="Auto"  Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

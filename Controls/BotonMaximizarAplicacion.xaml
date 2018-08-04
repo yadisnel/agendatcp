@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Agenda.Controles.BotonMaximizarAplicacion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="20" Cursor="Hand" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <UserControl.Resources>
+        <!-- Animacion de sombra salida -->
+        <Storyboard x:Key="AnimacionSombraSalida">
+            <DoubleAnimation BeginTime="00:00:00" Storyboard.TargetName="CapaSombra" Duration="00:00:00.250" From="1" To="0" Storyboard.TargetProperty="Opacity"></DoubleAnimation>
+        </Storyboard>
+        <!-- Animacion de sombra entrada -->
+        <Storyboard x:Key="AnimacionSombraEntrada">
+            <DoubleAnimation  BeginTime="00:00:00" Storyboard.TargetName="CapaSombra" Duration="00:00:00.250" From="0" To="1" Storyboard.TargetProperty="Opacity">
+            </DoubleAnimation>
+        </Storyboard>
+        <Style x:Key="IconoBotonMaximizar" TargetType="Image">
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Source" Value="Imagenes/IconoMaximizar.png" />
+        </Style>
+        <Style x:Key="IconoBotonRestaurar" TargetType="Image">
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Source" Value="Imagenes/IconoRestaurar.png" />
+        </Style>
+        <Style  x:Key="EstiloBotonMaximizarAplicacion"  TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="tmpltButtonMaximizar" >
+                        <Grid Height="20" Width="20" >
+                            <Border Name="CapaSombra" BorderBrush="{DynamicResource PrimaryHueLightBrush}" BorderThickness="0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" CornerRadius="0" VerticalAlignment="Stretch" Width="Auto" Background="{DynamicResource PrimaryHueLightBrush}"/>
+                            <Image Name="IconoMaximizar" Stretch="Uniform" Style="{DynamicResource IconoBotonMaximizar}" DataContext="{Binding Source= BotonMaximizarAplicacion}"/>
+                            <Image Name="IconoRestaurar" Stretch="Uniform" Visibility="Hidden" Style="{StaticResource IconoBotonRestaurar}"   DataContext="{Binding Source= BotonMaximizarAplicacion}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="Button.MouseEnter">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Button.MouseLeave">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                            <Trigger Property="Tag" Value="Maximizado" >
+                                <Setter TargetName="IconoMaximizar" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="IconoRestaurar" Property="Visibility" Value="Hidden" />
+                            </Trigger>
+                            <Trigger Property="Tag" Value="Minimizado" >
+                                <Setter TargetName="IconoMaximizar" Property="Visibility" Value="Hidden" />
+                                <Setter TargetName="IconoRestaurar" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Button Style="{DynamicResource EstiloBotonMaximizarAplicacion}" Name="MiBotonMaximizarAplicacion" Click="onClickMaximizar"></Button>    
+</UserControl>

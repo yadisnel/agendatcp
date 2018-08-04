@@ -1,0 +1,76 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarActividades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Entrada al sistema" Height="295" Width="488" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>            
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Border Name="borderFondoVentana" Grid.RowSpan="28" Grid.ColumnSpan="2" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2"/>
+       
+       <TextBlock Name="TextBlockNombreactividad"  Text="Nombre de la actividad:" Grid.Column="0" Grid.Row="2"  VerticalAlignment="Stretch" Margin="25,0,10,0" />
+        <TextBox   Height="25" Name="TextBoxNombreactividad" Grid.ColumnSpan="2"   Grid.Column="0" Grid.Row="4" Margin="25,0,10,0" VerticalAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validaciones:ReglaValidacionNombre/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBlock Name="TextBlockNombreInterno" Text="Nombre interno:" Grid.Column="0" Grid.Row="6"  VerticalAlignment="Stretch" Margin="25,0,10,0" />
+        <TextBox   Height="25" Name="TextBoxNombreInterno" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="8" Margin="25,0,10,0" VerticalAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="NombreInterno" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validaciones:ReglaValidacionNombre/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        <TextBlock Name="TextBlockDescripcion" Text="Descripción:" Grid.Column="0" Grid.Row="10"  VerticalAlignment="Stretch" Margin="25,0,10,0" />
+        <TextBox   Height="Auto" Width="Auto" Grid.ColumnSpan="2" Name="TextBoxDescripcion"  Grid.Column="0" Grid.Row="12" Margin="25,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True">
+                <TextBox.Text>
+                    <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validaciones:ReglaValidacionDescripcion/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        <CheckBox Name="CheckBoxEsRegimenSimplificado" Content="¿Es Régimen simplificado?" Grid.Row="13" VerticalAlignment="Bottom" Margin="25,0,10,0">
+                <CheckBox.IsChecked>
+                    <Binding Path="EsRegimenSimplificado" UpdateSourceTrigger="PropertyChanged"/>
+                </CheckBox.IsChecked>
+            </CheckBox>
+            <Button Name="BotonAceptar" IsDefault="True" Grid.Column="1" Grid.Row="14" Content="Aceptar" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  Height="25" Width="100"/>-->
+              
+    </Grid>
+</Window>
+

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarConceptoGasto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Adicionar nuevo concepto de gasto" Height="169.805" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Name="GridPrincipal" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,30">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="20"/>            
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Border Name="borderFondoVentana" Grid.RowSpan="10" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2"/>
+        <controles:BarraTitulo Name="ControlBarraTitulo" Icono="{DynamicResource IconoLogotipo}" Titulo="Adicionar nuevo concepto de gasto" Height="28"  Grid.ColumnSpan="1"/>
+        <TextBlock Name="TextBlockNombreConceptoIngreso" Style="{DynamicResource EstiloTextBlockEtiquetas}" Text="Nombre del concepto de gasto:" Margin="20,0,10,0" Grid.Column="0" Grid.Row="2"  VerticalAlignment="Stretch"  Grid.ColumnSpan="2" />
+        <TextBox Name="TextBoxNombreConceptoGasto" Style="{DynamicResource EstiloControlTextBox}" Height="25" Grid.Column="0" Grid.Row="3" Margin="20,0,10,0" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <TextBox.Text>
+                <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionNombre/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Button Name="BotonAceptar" Style="{DynamicResource EstiloControlBotonComun}" Grid.Row="5" Content="Aceptar" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center"  Height="25" Width="100"/>-->
+    </Grid>
+</Window>
+

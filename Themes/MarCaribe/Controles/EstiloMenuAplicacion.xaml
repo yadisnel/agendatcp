@@ -1,0 +1,15 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- ******************BOTON MENU**********************************************************-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <Image x:Key="IconoMenuInicio" Source="../Imagenes/Inicio.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoMenuRegistroIngresos" Source="../Imagenes/RegistroIngresos.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoMenuRegistroGastos" Source="../Imagenes/RegistroGastos.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoMenuRegistroProductos" Source="../Imagenes/RegistroProductos.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoMenuEmisionReportes" Source="../Imagenes/EmisionReportes.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoMenuConfiguracion" Source="../Imagenes/Configuracion.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoBotonMenuAyuda" Source="../Imagenes/IconoBotonMenuAyuda.png" Stretch="Fill" Height="32" Width="32"/>
+    <Image x:Key="IconoBotonMenuCentroInformativo" Source="../Imagenes/IconoBotonMenuCentroInformativo.png" Stretch="Fill" Height="32" Width="32"/>
+</ResourceDictionary> 

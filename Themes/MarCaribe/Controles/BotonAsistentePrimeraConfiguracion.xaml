@@ -1,0 +1,77 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../EstilosComunes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!-- ************************************* BOTON SECCIONES ARTE ************************************-->
+    <!-- Color base del boton -->
+    <SolidColorBrush x:Key="ColorBaseBotonSecciones" Color="#FFB6D1F5"></SolidColorBrush>
+    <!-- Degradado de fondo  -->
+    <LinearGradientBrush x:Key="DegradadoFondoSecciones" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Offset="0" Color="#D1FFFFFF"></GradientStop>
+        <GradientStop Offset="0.2" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="0.8" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="1" Color="#D1FFFFFF"></GradientStop>
+    </LinearGradientBrush>
+    <!-- Degradado de fondo  -->
+    <LinearGradientBrush x:Key="DegradadoSeleccionSecciones" StartPoint=".5,0" EndPoint=".5,1">
+        <GradientStop Offset="0" Color="#FF8BA6D1"></GradientStop>
+        <GradientStop Offset="0.2" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="0.8" Color="#82FFFFFF"></GradientStop>
+        <GradientStop Offset="1" Color="#FF8BA6D1"></GradientStop>
+    </LinearGradientBrush>
+    <!-- Estilo vidrio  -->
+    <Style  x:Key="EstiloVidrioBotonSecciones"  TargetType="{x:Type Border}" >
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#0F000000" Offset="0"/>
+                    <GradientStop Color="#2411322D" Offset="0.25"/>
+                    <GradientStop Color="#0F000000" Offset="0.5"/>
+                    <GradientStop Color="#2411322D" Offset="0.75"/>
+                    <GradientStop Color="#0F000000" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Estilo del boton secciones topo1 -->
+    <Style  x:Key="BotonAsistentePrimeraConfiguracion"  TargetType="{x:Type Button}" >
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="#FF003D5B" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="tmpltButton" >
+                    <Grid>
+                        <Border x:Name="CapaBase"  Background="{StaticResource ColorBaseBotonSecciones}" CornerRadius="5,5,5,5"/>
+                        <Border x:Name="CapaSombra" Opacity="0" Background="#FFD3DBE8" CornerRadius="5,5,5,5"/>
+                        <Border x:Name="CapaVidrio" Style="{StaticResource EstiloVidrioBotonSecciones}" CornerRadius="5,5,5,5"/>
+                        <Border x:Name="CapaDegradadoFondo" Background="{StaticResource DegradadoFondoSecciones}" CornerRadius="5,5,5,5"/>
+                        <Border x:Name="CapaBorde"  CornerRadius="5,5,5,5" BorderBrush="#FFA2BADE"  Opacity="1" BorderThickness="1"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.Tag"  Value="Seleccionado">
+                            <Setter TargetName="CapaBase" Property="Background"  Value="#FF403870"></Setter>
+                            <Setter TargetName="CapaBorde" Property="BorderBrush"  Value="#66403870"></Setter>
+                        </Trigger>
+                        <Trigger Property="Button.Tag"  Value="Normal">
+                            <Setter TargetName="CapaBase" Property="Background"  Value="{StaticResource DegradadoFondoSecciones}"></Setter>
+                        </Trigger>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraSalida}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard Storyboard="{StaticResource AnimacionSombraEntrada}"></BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

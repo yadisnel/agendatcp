@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Agenda.Controles.BotonPestana"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controles="clr-namespace:Agenda.Controles"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="28" d:DesignWidth="175" SnapsToDevicePixels="True" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <UserControl.Resources>
+        <Style  x:Key="EstiloBotonPestana"  TargetType="{x:Type Button}" >
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />           
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="tmpltBotonMenu" >
+                        <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="28"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="28"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Name="CapaUnica" BorderThickness="0"  CornerRadius="2,2,0,0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="3" Opacity="0" Background="White"/>
+                        </Grid>                       
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Border Name="CapaBase" BorderThickness="0"  CornerRadius="2,2,0,0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="4" Background="{DynamicResource ColorBaseControlBotonMenu}"/>
+        <Border Name="CapaDegradado" BorderThickness="1"  CornerRadius="2,2,0,0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="4" BorderBrush="{DynamicResource ColorBaseBordeControl}">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CCFFFFFF"/>
+                    <GradientStop Offset="0.1"/>
+                    <GradientStop Offset="0.95"/>
+                    <GradientStop Color="#CCFFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border Name="CapaSombra" BorderThickness="1"  CornerRadius="2,2,0,0" Opacity="0" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="3" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="{DynamicResource ColorCapaSombraBotonMenu}"/>
+        <Border Name="CapaSeleccion" BorderThickness="1"  CornerRadius="2,2,0,0" Opacity="1" Visibility="Hidden" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="3" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="{DynamicResource ColorCapaSombraBotonMenu}"/>
+        <TextBlock Name="TituloBoton" HorizontalAlignment="Center" Grid.Column="1" Margin="5,0,0,0" TextWrapping="Wrap" Text="Registro de Productos" VerticalAlignment="Center" Foreground="{DynamicResource ColorTextoBotonMenu}"/>
+        <Image Name ="IconoBoton" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" Height="24" Stretch="Fill" Margin="5,0,0,0" VerticalAlignment="Center" Width="24"/>
+        <Path Name="IconoSeleccion" Grid.Column="2" Stroke="{DynamicResource ColorBaseBordeControl}" Visibility="Hidden" Fill="{DynamicResource ColorBaseBordeControl}"   Data="M5,10 L15,10 L10,19"/>
+        <Button Style="{DynamicResource EstiloBotonPestana}" Name="MiBotonMenu" Grid.ColumnSpan="3" Click="onClick"></Button>
+    </Grid>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.MouseEnter">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{DynamicResource AnimacionSombraEntrada}"></BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UserControl.MouseLeave">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{DynamicResource AnimacionSombraSalida}"></BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>        
+    </UserControl.Triggers>    
+</UserControl> 

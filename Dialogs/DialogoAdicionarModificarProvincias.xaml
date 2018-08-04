@@ -1,0 +1,41 @@
+﻿<Window x:Class="Agenda.ModuloDialogos.Dialogos.DialogoAdicionarModificarProvincias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:validaciones="clr-namespace:Agenda.ModeloDatos.Validaciones;assembly=DataModel"
+        xmlns:controles="clr-namespace:Agenda.Controles;assembly=Controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        FocusManager.FocusedElement="{Binding ElementName=textBoxNombreProducto}"
+        Title="Entrada al sistema" Height="165" Width="352" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Opacity="1" AllowsTransparency="True" Background="#00000000">
+
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>           
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>            
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Border Name="borderFondoVentana" Grid.RowSpan="6" Grid.Row="0" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1" BorderBrush="{DynamicResource ColorBaseBordeControl}" Background="#FFD9E7F8" CornerRadius="2,2,2,2" Margin="0,0,0,0" />
+        <controles:BarraTitulo Name="ControlBarraTitulo" Icono="{DynamicResource IconoLogotipo}" Titulo="Adicionar nueva provincia" Height="28" Grid.ColumnSpan="6"/>
+        <TextBlock Name="TextBlockNombreactividad" Style="{DynamicResource EstiloTextBlockEtiquetas}"  Text="Nombre de la provincia:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" Margin="20,0,10,0" />
+        <TextBox Name="TextBoxNombreactividad" Style="{DynamicResource EstiloControlTextBox}"  Grid.Column="0" Grid.Row="2" Margin="20,0,10,0" VerticalAlignment="Stretch">
+            <TextBox.Text>
+                <Binding Path="Nombre" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaciones:ReglaValidacionNombre/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Button Name="BotonAceptar" Style="{DynamicResource EstiloControlBotonComun}" Content="Aceptar" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center"  Height="25" Width="100" Margin="0,0,10,0"/>-->        
+        
+        
+    </Grid>
+</Window>
+
